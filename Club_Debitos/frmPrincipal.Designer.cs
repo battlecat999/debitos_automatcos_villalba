@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.mnuVertical = new System.Windows.Forms.Panel();
+            this.cmdBancoProvincia = new System.Windows.Forms.Button();
             this.cmdMacro = new System.Windows.Forms.Button();
             this.cmdVISAElectron = new System.Windows.Forms.Button();
             this.cmdVISACrédito = new System.Windows.Forms.Button();
@@ -51,6 +53,7 @@
             // mnuVertical
             // 
             this.mnuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.mnuVertical.Controls.Add(this.cmdBancoProvincia);
             this.mnuVertical.Controls.Add(this.cmdMacro);
             this.mnuVertical.Controls.Add(this.cmdVISAElectron);
             this.mnuVertical.Controls.Add(this.cmdVISACrédito);
@@ -64,6 +67,22 @@
             this.mnuVertical.Size = new System.Drawing.Size(250, 548);
             this.mnuVertical.TabIndex = 2;
             // 
+            // cmdBancoProvincia
+            // 
+            this.cmdBancoProvincia.BackColor = System.Drawing.Color.White;
+            this.cmdBancoProvincia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.cmdBancoProvincia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBancoProvincia.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBancoProvincia.ForeColor = System.Drawing.SystemColors.Control;
+            this.cmdBancoProvincia.Image = ((System.Drawing.Image)(resources.GetObject("cmdBancoProvincia.Image")));
+            this.cmdBancoProvincia.Location = new System.Drawing.Point(0, 312);
+            this.cmdBancoProvincia.Name = "cmdBancoProvincia";
+            this.cmdBancoProvincia.Size = new System.Drawing.Size(250, 64);
+            this.cmdBancoProvincia.TabIndex = 7;
+            this.cmdBancoProvincia.Text = "}";
+            this.cmdBancoProvincia.UseVisualStyleBackColor = false;
+            this.cmdBancoProvincia.Click += new System.EventHandler(this.BancoProvincia_Click);
+            // 
             // cmdMacro
             // 
             this.cmdMacro.BackColor = System.Drawing.Color.White;
@@ -72,7 +91,7 @@
             this.cmdMacro.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdMacro.ForeColor = System.Drawing.SystemColors.Control;
             this.cmdMacro.Image = global::Club_Debitos.Properties.Resources.macro;
-            this.cmdMacro.Location = new System.Drawing.Point(0, 255);
+            this.cmdMacro.Location = new System.Drawing.Point(0, 252);
             this.cmdMacro.Name = "cmdMacro";
             this.cmdMacro.Size = new System.Drawing.Size(250, 64);
             this.cmdMacro.TabIndex = 6;
@@ -238,5 +257,6 @@
         private System.Windows.Forms.Button cmdVISAElectron;
         private System.Windows.Forms.Button cmdVISACrédito;
         private System.Windows.Forms.Button cmdMacro;
+        private System.Windows.Forms.Button cmdBancoProvincia;
     }
 }

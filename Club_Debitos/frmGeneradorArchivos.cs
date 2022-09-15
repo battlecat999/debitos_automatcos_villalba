@@ -171,7 +171,12 @@ namespace Club_Debitos
                         Genera_Tipo_Archivo_Macro gam = new Genera_Tipo_Archivo_Macro();
                         gam.Genera_Archivo(this.prgProgreso, strConsulta, strPlanilla, this.datFecha_Presentacion, datFecha_Vencimiento, true);
                         break;
-                        
+
+                    case (Int32)EnumTipoArchivos.TipoArchivos.PROVINCIA:
+                        Genera_Tipo_Archivo_Provincia gap = new Genera_Tipo_Archivo_Provincia();
+                        gap.Genera_Archivo(this.prgProgreso, strConsulta, strPlanilla, this.datFecha_Presentacion, datFecha_Vencimiento, true);
+                        break;
+
                 }
 
                 //Genera_Archivo_COMAFI(); 

@@ -17,7 +17,9 @@ namespace Club_Debitos
             COMAFI=6,
             GALICIA=7,
             FRANCES=8,
-            MACRO=9
+            MACRO=9,
+            ITAU=10,
+            PROVINCIA=11
         }
     }
 }

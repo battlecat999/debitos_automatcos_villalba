@@ -115,5 +115,11 @@ namespace Club_Debitos
         {
             AbrirFormInPanel(new frmGeneradorArchivos((Int32)EnumTipoArchivos.TipoArchivos.MACRO));
         }
+
+        private void BancoProvincia_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new frmGeneradorArchivos((Int32)EnumTipoArchivos.TipoArchivos.PROVINCIA));
+        }
+
     }
 }

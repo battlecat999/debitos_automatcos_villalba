@@ -80,7 +80,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="encrypasocv">
-      <HintPath>D:\Kamus_Proyectos\Lector_Generador_Licencias_Villalba\MC_Security\MC_Security\bin\Debug\encrypasocv.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Metaclub\encrypasocv.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CBU_Analisis_Gral.cs" />
+    <Compile Include="Genera_Tipo_Archivo_Provincia.cs" />
     <Compile Include="Entidades.cs" />
     <Compile Include="EnumTipoArchivos.cs" />
     <Compile Include="Form1.cs">
