@@ -97,7 +97,7 @@ namespace Club_Debitos
             strConsulta += " IIf (d.save is null,'',d.save) as RutaArchivo, ";
             strConsulta += " d.nombreArchivo as Nombre_Archivo ,";
             strConsulta += " IIf (d.NroEstablecimiento is null,'',d.NroEstablecimiento) as Numero_Establecimiento, ";
-            strConsulta += " Sum([b].[Saldo]) AS SALDO, d.RazonSocial";
+            strConsulta += " Sum([b].[Saldo]) AS SALDO";
             strConsulta += " From (((Socios a Inner Join ItemPlaniCob b ";
             strConsulta += " On a.NroTarCred = b.NumTarjeta ) ";
             strConsulta += " Inner Join PlaniCob c ";
@@ -110,7 +110,7 @@ namespace Club_Debitos
             strConsulta += " and c.iDNroPlaniCob = " + strPlanilla;
             strConsulta += " Group By a.NroTarCred, a.IdSocio, a.ApellidoyNombres, IIf(d.origencomercial is null, '', d.origencomercial), IIf(d.CUIT is null, '', d.CUIT), ";
             strConsulta += " IIf(d.codServicio is null, '', d.codServicio), IIf(d.producto is null, '', d.producto), IIf(d.nroServicio is null, '', d.nroServicio) , ";
-            strConsulta += "IIf(d.secuencia is null, '', d.secuencia),IIf (d.save is null,'',d.save), d.nombreArchivo, IIf (d.NroEstablecimiento is null,'',d.NroEstablecimiento), d.RazonSocial";
+            strConsulta += "IIf(d.secuencia is null, '', d.secuencia),IIf (d.save is null,'',d.save),IIf (d.NroEstablecimiento is null,'',d.NroEstablecimiento) , d.nombreArchivo ";
 
             return strConsulta;
         }

@@ -61,7 +61,7 @@ namespace Club_Debitos
 
                 strNombre_Archivo = "";
                 //strNombre_Archivo = "EB" + dr["Origen_Comercial"].ToString().Trim().PadRight(5, '0') + "." + this.datFecha_Presentacion.Value.Date.ToString("yyyyMMdd");
-                strNombre_Archivo = dt.Rows[0]["Nombre_Archivo"].ToString().Trim() + "." + datFecha_Presentacion.Value.Date.ToString("yyyyMMdd");
+                strNombre_Archivo = dt.Rows[0]["Producto"].ToString().Trim() + "." + datFecha_Presentacion.Value.Date.ToString("yyyyMMdd");
 
                 cmdFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 cmdFileDialog.FilterIndex = 2;
@@ -108,16 +108,9 @@ namespace Club_Debitos
                     }
 
                     strLinea = "";
-
+                    
                     //Código de Transacción
-                    if (dr["CBU"].ToString().Trim().Substring(0, 3) == "014")
-                    {
-                        strLinea += "71";
-                    }
-                    else
-                    {
-                        strLinea += "51";
-                    }
+                    strLinea = "51";
 
                     //Fecha de Vencimiento
                     strLinea += datFecha_Vencimiento.Value.Date.ToString("ddMMyyyy");
@@ -161,13 +154,13 @@ namespace Club_Debitos
 
                     //PresTación
                     strProducto = "";
-                    if (dr["Producto"].ToString().Trim().Length > 10)
+                    if ("CUOTA".ToString().Trim().Length > 10)
                     {
-                        strProducto =dr["Producto"].ToString().Trim().Substring(0, 10);
+                        strProducto ="CUOTA".ToString().Trim().Substring(0, 10);
                     }
                     else
                     {
-                        strProducto =dr["Producto"].ToString().Trim().PadRight(10, ' ');
+                        strProducto ="CUOTA".ToString().Trim().PadRight(10, '0');
                     }
 
                     strLinea += strProducto;
@@ -177,7 +170,7 @@ namespace Club_Debitos
                     //strLinea += strNumero_Socio.PadRight(15, ' ');
 
                     //Referencia Univoca
-                    //strReferencia_UNIVOCA = "CUOTA".ToString().Trim() + " " + strNombre_Mes.Trim();
+                    strReferencia_UNIVOCA = "DEBITO".ToString().Trim() + " " + strNombre_Mes.Trim();
                     if (strReferencia_UNIVOCA.Length > 15)
                     {
                         strReferencia_UNIVOCA = strReferencia_UNIVOCA.Substring(0, 15); //SON 15 POSICIONES
@@ -194,7 +187,7 @@ namespace Club_Debitos
                     strLinea += "   "; //3 Blancos
 
                     //nombre empresa
-                    strLinea += dr["RazonSocial"].ToString().Trim().PadRight(16, ' '); 
+                    strLinea += dr["Producto"].ToString().PadRight(16, '0'); 
 
 
                     //Se quitó porque genera una línea en blanco al final del archivo y da error en las pruebas con el Banco.
