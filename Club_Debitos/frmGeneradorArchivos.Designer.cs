@@ -143,7 +143,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(350, 504);
+            this.button1.Location = new System.Drawing.Point(349, 492);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 32);
@@ -177,7 +177,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(199, 504);
+            this.button2.Location = new System.Drawing.Point(202, 492);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 32);
@@ -193,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(651, 630);
+            this.ClientSize = new System.Drawing.Size(651, 558);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cboCobrador);
             this.Controls.Add(this.label4);
@@ -214,7 +214,6 @@
             this.MaximizeBox = false;
             this.Name = "frmGeneradorArchivos";
             this.Text = "Generación archivo COMAFI";
-
             this.ResumeLayout(false);
             this.PerformLayout();
 

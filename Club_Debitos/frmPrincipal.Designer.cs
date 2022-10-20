@@ -132,11 +132,11 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(81, 526);
+            this.lblVersion.Location = new System.Drawing.Point(81, 517);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(101, 13);
             this.lblVersion.TabIndex = 3;
-            this.lblVersion.Text = "28/05/2021 3.0.2.0";
+            this.lblVersion.Text = "16/09/2022 3.1.0.0";
             // 
             // panelConfiguracion
             // 
